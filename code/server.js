@@ -16,6 +16,8 @@ app.get("/contacts", (req, res) => {
   console.log(db)
 })
 
+const allContacts = "/contacts"
+
 app.get("/contacts/:id", (req, res) => {
   const id = parseInt(req.params.id)
   console.log(id);
@@ -25,7 +27,7 @@ app.get("/contacts/:id", (req, res) => {
     res.send(oneContact)
       // }
       // else if {
-      //   (("/contacts" !== "/contacts"), (req, res)) => {
+      //   (allContacts === "/contacts"), (req, res) => {
       //     res.json({db})}
   } else {
     res.status(404)
