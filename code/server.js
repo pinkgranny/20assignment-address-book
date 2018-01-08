@@ -15,8 +15,17 @@ app.get("/contacts", (req, res) => {
   res.json({db})
   console.log(db)
 })
-
-const allContacts = "/contacts"
+// 
+// app.get("/contacts", (req, res) => {
+//   const allContacts = res.json({db})
+//   console.log(db)
+//   if (exact "/contacts") {
+//     res.json({db})
+//   } else {
+//     res.status(404)
+//     res.send("404 not found")}
+//   }
+// })
 
 app.get("/contacts/:id", (req, res) => {
   const id = parseInt(req.params.id)
@@ -27,8 +36,10 @@ app.get("/contacts/:id", (req, res) => {
     res.send(oneContact)
       // }
       // else if {
-      //   (allContacts === "/contacts"), (req, res) => {
-      //     res.json({db})}
+      //   app.get("/contacts", (req, res) => {
+      //     res.json({db})
+      //     console.log(db)
+      //   })
   } else {
     res.status(404)
     res.send("404 not found")}
